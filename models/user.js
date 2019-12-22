@@ -1,18 +1,16 @@
 import  mongoose from 'mongoose';
+import Counter from './counter';
 const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     name : {
         type: String,
         required: true
     },
-    content : {
-        type: String,
-        required: true
+    email : {
+        type : String,
+        required: false
     },
-    date: {
-        type: Date,
-        default: Date.now
-    }
+    counterIDs : {type: [String]}
 });
 
-export default  mongoose.model('user', UserSchema);
+export default  mongoose.model('User', UserSchema);
