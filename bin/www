@@ -14,10 +14,9 @@ var http = require('http');
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/genericgenome", {
-  useNewUrlParser: true,
- // useUnifiedTopology: true
-});
+mongoose.connect("mongodb+srv://shaqal:apple1@cluster0-xe7yr.azure.mongodb.net/test?retryWrites=true&w=majority",
+    { useNewUrlParser: true ,
+    useUnifiedTopology: true});
 
 /**
  * Get port from environment and store in Express.
